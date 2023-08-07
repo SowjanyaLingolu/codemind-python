@@ -1,14 +1,13 @@
-def is_ugly(num):
-        if num == 0:
-            return False
-        for i in [2, 3, 5]:
-            while num % i == 0:
-                num /= i
-        return num == 1
-
-num=int(input())
-result=is_ugly(num)
-if result==1:
+def u(n):
+    if n==0:
+        return False
+    for i in [2,3,5]:
+        while n%i==0:
+            n/=i
+    return n==1
+n=int(input())
+b=u(n)
+if b==True:
     print("Ugly Number")
 else:
     print("Not Ugly Number")
