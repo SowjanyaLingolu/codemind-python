@@ -1,10 +1,9 @@
-def is_perfect_square(number):
-    if number<0:
-        return False
-    square_root=int(number**0.5)
-    return square_root * square_root == number
+def per(n):
+    i=1
+    while i*i<=n:
+        if i*i==n:
+            return True
+        i+=1
+    return False
 num=int(input())
-if is_perfect_square(num):
-    print("True")
-else:
-    print("False")
+print(per(num))
