@@ -1,15 +1,15 @@
-def ha(n):
-    r=s=0;
-    while(n>0):
-        r=n%10;
-        s=s+(r*r);
-        n=n//10;
-    return s;
-num=int(input())
-result=num;
-while(result!=1 and result!=4):
-    result=ha(result);
-if(result==1 or result==7):
-    print("True");
+def isH(number):
+    visited = set()
+    while True:
+        if number == 1:
+            return 1
+        elif number in visited:
+            return 0
+        else:
+            visited.add(number)
+            number = sum(int(digit)**2 for digit in str(number))
+number = int(input())
+if isH(number):
+    print(True)
 else:
-    print("False")
+    print(False)
