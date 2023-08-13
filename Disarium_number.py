@@ -1,21 +1,14 @@
-def Length(n):
-    length=0
-    while(n!=0):
-        length=length+1;
-        n=n//10
-    return length
-num=int(input())
-sum=0
-len=Length(num)
-n=num
-while(num>0):
-    rem=num%10
-    sum=sum+int(rem**len)
-    num=num//10
-    len=len-1
-if sum==n:
+n=int(input())
+length=len(str(n))
+Temp=n
+summ=0
+rem=0
+while Temp>0:
+    rem=Temp%10
+    summ=summ+int(rem**length)
+    Temp=Temp//10
+    length=length-1
+if summ==n:
     print("True")
 else:
     print("False")
-    
-    
